@@ -24,7 +24,7 @@ p <- full_trains %>%
   arrange(month) %>% 
   mutate(cum_sum = cumsum((num_late_at_departure))) %>% 
   ggplot(aes(x = journey, y = cum_sum)) +
-  geom_image(aes(image = image), size = .15)  + 
+  geom_image(aes(image = image), size = .15) + 
   guides(colour = FALSE) +
   coord_flip() +
   labs(title = "Running Total of International SNCF Trains Departing Late", 
